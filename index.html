@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifyPro - Complete Verification Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🔐</div>
+                <span class="logo-text">VerifyPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#payment" class="nav-link">Payment</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-secondary">Sign In</button>
+                <button class="btn-primary">Get Started</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">🚀 Trusted by 10,000+ Developers</div>
+                <h1 class="hero-title">
+                    Secure Verification
+                    <span class="gradient-text">Made Simple</span>
+                </h1>
+                <p class="hero-description">
+                    Powerful, easy-to-integrate verification services for modern applications. 
+                    Email, phone, documents, and push notifications in one unified platform.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Start Building
+                    </button>
+                    <button class="btn-secondary btn-large">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">&lt;2s</div>
+                        <div class="stat-label">Delivery Time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10M+</div>
+                        <div class="stat-label">Verifications</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">📧</div>
+                    <h4>Email Sent</h4>
+                    <p>OTP: 4 8 2 1 9 3</p>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">📱</div>
+                    <h4>Push Notification</h4>
+                    <p>New login detected</p>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">📄</div>
+                    <h4>Document Verified</h4>
+                    <p>ID check completed</p>
+                </div>
+                <div class="main-visual">
+                    <div class="visual-container">
+                        <div class="verification-animation">
+                            <div class="verification-circle">
+                                <div class="checkmark">✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Verification Services</h2>
+                <p>Comprehensive solutions for all your verification needs</p>
+            </div>
+            
+            <!-- Email Verification Service -->
+            <div class="service-card featured">
+                <div class="service-badge">Most Popular</div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Email Verification</h3>
+                        <p class="service-description">
+                            Secure, reliable email OTP verification with beautiful templates and instant delivery.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Resend API Integration</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Customizable Templates</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>10-minute Expiry</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Multiple Attempt Protection</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Analytics & Logging</span>
+                            </div>
+                        </div>
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span>Flutter Integration</span>
+                                <button class="copy-btn">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <pre><code class="language-dart">import 'package:easy_verification/easy_verification.dart';
+
+final config = EmailConfig(
+  apiKey: 'your_resend_api_key',
+  fromEmail: 'onboarding@resend.dev',
+);
+
+final otpManager = OTPManager(emailConfig: config);
+
+// Send OTP
+final result = await otpManager.sendOTP('user@example.com');
+
+// Verify OTP
+final isValid = otpManager.verifyOTP('user@example.com', '123456');</code></pre>
+                        </div>
+                        <div class="service-actions">
+                            <button class="btn-primary">
+                                <i class="fas fa-book"></i>
+                                View Documentation
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-download"></i>
+                                Get Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Services Grid -->
+            <div class="services-grid">
+                <!-- Phone Verification -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Phone Verification</h3>
+                    <p>SMS OTP verification with global coverage and carrier-grade delivery.</p>
+                    <div class="service-status">
+                        <span class="status-badge coming-soon">Coming Soon</span>
+                    </div>
+                    <ul class="service-highlights">
+                        <li>Global SMS Coverage</li>
+                        <li>Carrier-grade Delivery</li>
+                        <li>Voice OTP Support</li>
+                    </ul>
+                </div>
+
+                <!-- Document Verification -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Document Verification</h3>
+                    <p>AI-powered document verification for IDs, passports, and licenses.</p>
+                    <ul class="service-highlights">
+                        <li>AI-Powered Analysis</li>
+                        <li>100+ Document Types</li>
+                        <li>Real-time Validation</li>
+                    </ul>
+                </div>
+
+                <!-- Push Notifications -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Push Notifications</h3>
+                    <p>Cross-platform push notifications with rich media and deep linking.</p>
+                    <div class="service-status">
+                        <span class="status-badge coming-soon">Coming Soon</span>
+                    </div>
+                    <ul class="service-highlights">
+                        <li>Cross-platform Support</li>
+                        <li>Rich Media Notifications</li>
+                        <li>Advanced Targeting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose VerifyPro?</h2>
+                <p>Built for developers, trusted by enterprises</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Lightning Fast</h4>
+                    <p>Sub-2 second delivery with 99.9% uptime guarantee</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Bank-Grade Security</h4>
+                    <p>End-to-end encryption and secure data handling</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>Developer First</h4>
+                    <p>Beautiful APIs and comprehensive documentation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Real-time Analytics</h4>
+                    <p>Detailed insights and performance metrics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Global Scale</h4>
+                    <p>Worldwide coverage with local compliance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Expert support when you need it</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that works best for your needs</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Package 1: Free Trial -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="amount">$0</span>
+                            <span class="period">/7 days</span>
+                        </div>
+                        <p>Perfect for testing and small projects</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 7-day free trial</li>
+                        <li><i class="fas fa-check"></i> Push notifications</li>
+                        <li><i class="fas fa-check"></i> OTP verification</li>
+                        <li><i class="fas fa-times"></i> Email OTP</li>
+                        <li><i class="fas fa-times"></i> Phone OTP</li>
+                        <li><i class="fas fa-times"></i> Custom icons</li>
+                        <li><i class="fas fa-times"></i> Background push</li>
+                    </ul>
+                    <button class="btn-secondary btn-large">Start Free Trial</button>
+                </div>
+
+                <!-- Package 2: $45 -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount">$45</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Great for growing businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 300 Email OTP</li>
+                        <li><i class="fas fa-check"></i> Unlimited push notifications</li>
+                        <li><i class="fas fa-check"></i> OTP verification</li>
+                        <li><i class="fas fa-times"></i> Phone OTP</li>
+                        <li><i class="fas fa-times"></i> Custom icons</li>
+                        <li><i class="fas fa-times"></i> Background push</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                    </ul>
+                    <button class="btn-primary btn-large">Get Started</button>
+                </div>
+
+                <!-- Package 3: Premium -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="amount">Custom</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For high-volume applications</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 700+ Email OTP</li>
+                        <li><i class="fas fa-check"></i> 300+ Phone OTP</li>
+                        <li><i class="fas fa-check"></i> Unlimited push notifications</li>
+                        <li><i class="fas fa-check"></i> Work in background</li>
+                        <li><i class="fas fa-check"></i> Custom icons</li>
+                        <li><i class="fas fa-check"></i> Background push</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                    </ul>
+                    <button class="btn-secondary btn-large">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="payment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Secure Payment Options</h2>
+                <p>Choose your preferred payment method</p>
+            </div>
+            <div class="payment-grid">
+                <!-- EFT Payment -->
+                <div class="payment-card">
+                    <div class="payment-header">
+                        <div class="payment-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Electronic Funds Transfer (EFT)</h3>
+                    </div>
+                    <div class="payment-details">
+                        <div class="bank-details">
+                            <h4>Bank Transfer Details</h4>
+                            <div class="detail-row">
+                                <span class="detail-label">Bank Name:</span>
+                                <span class="detail-value">Standard Bank</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Account Holder:</span>
+                                <span class="detail-value">VerifyPro (Pty) Ltd</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Account Number:</span>
+                                <span class="detail-value">0123456789</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Branch Code:</span>
+                                <span class="detail-value">051001</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Reference:</span>
+                                <span class="detail-value">Your Email/Order ID</span>
+                            </div>
+                        </div>
+                        <div class="payment-instructions">
+                            <h4>Instructions</h4>
+                            <ul>
+                                <li>Use your email or order ID as payment reference</li>
+                                <li>Allow 24-48 hours for payment processing</li>
+                                <li>Send proof of payment to payments@verifypro.com</li>
+                                <li>Your service will be activated once payment is confirmed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Payment -->
+                <div class="payment-card">
+                    <div class="payment-header">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Credit/Debit Card Payment</h3>
+                    </div>
+                    <div class="payment-details">
+                        <div class="card-details">
+                            <h4>MasterCard Spot Money</h4>
+                            <div class="card-number">
+                                <i class="fab fa-cc-mastercard"></i>
+                                <span>5274 6000 0400 9390</span>
+                                <button class="copy-payment-btn" data-text="5274 6000 0400 9390">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="card-info">
+                                <div class="info-row">
+                                    <span class="info-label">Card Holder:</span>
+                                    <span class="info-value">VerifyPro Payments</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">Expiry:</span>
+                                    <span class="info-value">12/2026</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">CVV:</span>
+                                    <span class="info-value">123</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-security">
+                            <div class="security-features">
+                                <div class="security-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>PCI DSS Compliant</span>
+                                </div>
+                                <div class="security-item">
+                                    <i class="fas fa-lock"></i>
+                                    <span>256-bit Encryption</span>
+                                </div>
+                                <div class="security-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>3D Secure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Instructions -->
+                <div class="payment-instructions-card">
+                    <div class="instructions-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Important Payment Information</h3>
+                    </div>
+                    <div class="instructions-content">
+                        <div class="instruction-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Processing Time</h4>
+                                <p>Card payments are instant, EFT payments take 24-48 hours to process</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <i class="fas fa-receipt"></i>
+                            <div>
+                                <h4>Invoices & Receipts</h4>
+                                <p>Automated invoices and receipts are sent to your email after payment</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Security Guarantee</h4>
+                                <p>All payments are processed through secure, encrypted channels</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Payment Support</h4>
+                                <p>Contact payments@verifypro.com for any payment-related queries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Secure Your Application?</h2>
+                <p>Join thousands of developers building trusted applications with VerifyPro</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </button>
+                    <button class="btn-secondary btn-large">
+                        <i class="fas fa-comments"></i>
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🔐</div>
+                        <span class="logo-text">VerifyPro</span>
+                    </div>
+                    <p>Building trust through secure verification services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Email Verification</a></li>
+                        <li><a href="#">Phone Verification</a></li>
+                        <li><a href="#">Document Verification</a></li>
+                        <li><a href="#">Push Notifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VerifyPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
